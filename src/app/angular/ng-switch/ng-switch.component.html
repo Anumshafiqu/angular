@@ -1,0 +1,20 @@
+
+<!-- ngswith directive ki help sa multiple conditions show kar skta ha -->
+<div class="container mt-4">
+    <select class="form-controle w-12rem" (change)="getproductval($event)">
+        <option value="Default">selected product</option>
+        <option value="Laptop">Laptop</option>
+        <option value="TV">TV</option>
+        <option value="Mobile">Mobile</option>
+        <option value="Television">Television</option>
+    </select>
+
+<div class="mt-4" [ngSwitch]="selectedproduct">
+    <h5 class="text-success" *ngSwitchDefault="">please select product</h5>
+    <h5 class="text-success" *ngSwitchCase="'Laptop'">Laptop</h5>
+    <h5 class="text-success" *ngSwitchCase="'TV'">TV</h5>
+    <h5 class="text-success" *ngSwitchCase="'Mobile'">Mobile</h5>
+    <h5 class="text-success" *ngSwitchCase="'Television'">Television</h5>
+</div>
+</div>
+

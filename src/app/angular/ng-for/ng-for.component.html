@@ -1,0 +1,27 @@
+
+
+
+
+<!-- ngfor ik for loop ki tarha km karta ha jis ka use hm data ki collection ko display karan ka liya karta ha   -->
+
+<table class="table m-3">
+    <thead class="table-dark">
+        <tr>
+          <th>No</th>
+            <th>Product Image</th>
+            <th> Product Name</th>
+            <th>Product Id</th>
+            <th>Product Price</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let mypro of products; index as i">
+            <td># {{i}}</td>
+            <td><img src="{{mypro.proimg}}" alt="" width="80" height="70"></td>
+            <td>{{mypro.Name}}</td>
+            <td>{{mypro.Id}}</td>
+            <td>{{mypro.price}}</td>
+        </tr>
+    </tbody>
+</table>

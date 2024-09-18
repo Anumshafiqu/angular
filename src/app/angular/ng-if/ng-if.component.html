@@ -1,0 +1,15 @@
+
+
+<div class="container mt-5">
+    <button class="btn btn-success my-3 fw-bold" (click)="oncreateblock()">create block</button><br>
+    <div *ngIf="isvalid; then thenblock  else elseblock"></div>
+    <!-- thenblock t show ho ga jb condition true ho gy -->
+    <ng-template #thenblock>
+        <div class="w-25 rounded bg-success text-center text-white fw-bold p-3">Block has been created</div>
+    </ng-template>
+    <!-- else block is time show gy jb condition false ho gy -->
+    <ng-template #elseblock>
+        <div #elseblock class="w-25 rounded bg-light text-center text-success fw-bold p-3">No block has been created yet</div>
+    </ng-template>
+    
+</div>
