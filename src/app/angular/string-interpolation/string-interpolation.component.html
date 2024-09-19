@@ -1,0 +1,43 @@
+
+
+<!-- string interpolation -->
+
+<!-- string interpolation sting value ka sath work karta ha ya boolean ya kis or data type ka sath work nhe kar ha -->
+
+<div class="bg-light text-dark p-1 m-4 w-25 fw-bold">
+<p class="m-4">My name is {{dynamic}}</p>
+</div>
+
+<div class="bg-light text-dark p-2 m-4 w-25 fw-bold">
+    {{"welcome "  +  dyname}}
+</div>
+
+
+<div class="bg-light text-dark p-2 m-4 w-25 fw-bold">
+    {{dyname.toUpperCase()}}
+</div>
+<div class="bg-light text-dark p-2 m-4 w-25 fw-bold">
+    {{myMethod()}}
+</div>
+
+<div class="bg-light text-dark p-2 m-4 w-25 fw-bold">
+  <p>My App status is {{appstatus? status1: status2}}</p>
+</div>
+
+<!-- property binding -->
+<div class="bg-light text-dark p-2 m-4 w-25 fw-bold">
+<input type="text" [disabled]="enable" name="" id="" [value]="dyname" class="border-0 bg-light w-100">
+</div>
+
+<div class="bg-light text-dark p-2 m-4 w-25 fw-bold">
+    <input type="text" [hidden]="false" name="" id="" bind-value="dyname" class="border-0 bg-light w-100">
+    </div>
+    <div class="bg-light text-dark p-2 m-4 w-25 fw-bold">
+        <input type="text" [hidden]="false" name="" id="" [value]="appstatus? status1: status2" class="border-0 bg-light w-100">
+        </div>
+
+
+
+
+
+

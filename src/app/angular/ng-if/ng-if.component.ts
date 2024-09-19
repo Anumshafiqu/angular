@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './ng-if.component.css'
 })
 export class NgIfComponent {
+  // ngif
   isvalid:boolean= false;
+  // button click
   oncreateblock(){
     this.isvalid= true;
   }

@@ -8,13 +8,19 @@ import { AppComponent } from './app.component';
 import { NgIfComponent } from './angular/ng-if/ng-if.component';
 import { NgSwitchComponent } from './angular/ng-switch/ng-switch.component';
 import { NgForComponent } from './angular/ng-for/ng-for.component';
+import { StringInterpolationComponent } from './angular/string-interpolation/string-interpolation.component';
+import { EventBindingComponent } from './angular/event-binding/event-binding.component';
+import { TemplateRefrenceComponent } from './angular/template-refrence/template-refrence.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgIfComponent,
     NgSwitchComponent,
-    NgForComponent
+    NgForComponent,
+    StringInterpolationComponent,
+    EventBindingComponent,
+    TemplateRefrenceComponent
   ],
   imports: [
     BrowserModule,

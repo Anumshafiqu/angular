@@ -1,0 +1,53 @@
+
+
+<!-- template refrence variable -->
+ <h5>template refrence</h5><br>
+<input type="text" name="uxtrendz" value="uxtrendz" #inputinfo>
+<button (click)="ongetinfo(inputinfo)">Get info</button>
+
+
+
+
+
+
+
+<br><br><br>
+
+
+
+
+
+<!-- two way data binding ma data dono tarf bind hota ha component to view  -->
+<h5>twoway data binding</h5><br>
+<input type="text" name="uxtrendz" value="uxtrendz" [(ngModel)]="uname">
+<br>
+<p>{{uname}}</p>
+
+
+
+
+
+
+
+
+
+
+<!-- class binding ma hm multiple class ko bind kar skta ha -->
+<div class="box" [ngClass]="mltclass">
+    class binding
+</div>
+
+<br><br>
+<!-- style binding ma hm multiple styles ko bind kar skta ha -->
+<div class="box" [ngStyle]="mltistyle">
+    style binding
+</div>
+
+
+
+
+
+
+
+
+
