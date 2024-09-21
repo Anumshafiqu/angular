@@ -19,4 +19,37 @@
   <!-- <app-ng-for></app-ng-for> -->
    <!-- <app-string-interpolation></app-string-interpolation> -->
     <!-- <app-event-binding></app-event-binding> -->
-     <app-template-refrence></app-template-refrence>
+     <!-- <app-template-refrence></app-template-refrence> -->
+
+
+
+
+
+
+
+
+<!-- routing ka simple means ha pages ka navigation ya jo routes bnata ha alg alg pages ka liya in ko routes khte ha
+ angular ik single page application ha is liya hm directives ko use karta ha page ka ksi b portion ko chage karna ka lya
+ -->
+
+ <!-- routerlinkactive is link ko active karta ha
+  jis ka route ka path hmra url ka part hota ha  routerlinkactive analize karta ha ka kon sa path active ha or is link
+  ko active kar data ha-->
+     <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="contact">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="prodcut">Prodcut</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="page-not-found">Page not found</a>
+      </li>
+    </ul>
+    <router-outlet></router-outlet>

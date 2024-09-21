@@ -1,0 +1,12 @@
+.container-app{
+    margin: 50px;
+    border: 1px solid lightblue;
+    padding: 60px;
+
+}
+h1{
+    color: purple;
+    font-size: 100px;
+    font-weight: bolder;
+    font-style: italic;
+}
