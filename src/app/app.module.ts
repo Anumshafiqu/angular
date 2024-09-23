@@ -22,6 +22,9 @@ import { LaptopComponent } from './angular/laptop/laptop.component';
 import { TelevisionComponent } from './angular/television/television.component';
 import { MobileComponent } from './angular/mobile/mobile.component';
 import { WatchComponent } from './angular/watch/watch.component';
+import { PipeComponent } from './angular/pipe/pipe.component';
+import { UxpipePipe } from './apppipe/uxpipe.pipe';
+import { FilterPipe } from './apppipe/filter.pipe';
 
 
 const appRoutes:Routes=[
@@ -57,7 +60,10 @@ const appRoutes:Routes=[
     LaptopComponent,
     TelevisionComponent,
     MobileComponent,
-    WatchComponent
+    WatchComponent,
+    PipeComponent,
+    UxpipePipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
