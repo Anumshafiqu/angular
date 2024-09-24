@@ -25,6 +25,7 @@ import { WatchComponent } from './angular/watch/watch.component';
 import { PipeComponent } from './angular/pipe/pipe.component';
 import { UxpipePipe } from './apppipe/uxpipe.pipe';
 import { FilterPipe } from './apppipe/filter.pipe';
+import { ContactUsComponent } from './angular/contact-us/contact-us.component';
 
 
 const appRoutes:Routes=[
@@ -33,6 +34,7 @@ const appRoutes:Routes=[
 {path: 'login' , component: LoginComponent},
 {path: 'about' , component:AboutComponent},
 {path: 'contact' , component:ContactComponent},
+{path: 'contact-us' , component:ContactUsComponent},
 {path: 'prodcut'  ,component:ProdcutComponent, children: [
   {path: 'laptop' , component:LaptopComponent},
   {path: 'television' , component:TelevisionComponent},
@@ -63,7 +65,8 @@ const appRoutes:Routes=[
     WatchComponent,
     PipeComponent,
     UxpipePipe,
-    FilterPipe
+    FilterPipe,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
