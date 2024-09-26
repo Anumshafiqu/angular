@@ -1,0 +1,148 @@
+<div class="container">
+    <div class="row my-4">
+        <!-- <button class="btn btn-success w-10rem" (click)="getAlluser()">Get User</button> -->
+        <!-- <button class="btn btn-success mt-2" (click)="getAllCustomers()">Get Customers</button> -->
+        <div class="col-md-8 mt-2">
+            <select class="w-50 text-dark p-2">
+                 @for (item of userList; track $index) {
+                    <option>{{item.name}}</option>
+                 }
+                 
+            </select>
+        </div>
+    </div>
+</div>
+
+
+<!-- get data from apis and display in the table -->
+<table class="table table-bordered m-3 p-2">
+  <thead>
+    <tr>
+    <th>userName</th>
+    <th>emailId</th>
+    <th>fullName</th>
+    <th>role</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of customerList">
+      <td>{{item.userName}}</td>
+      <td>{{item.emailId}}</td>
+      <td>{{item.fullName}}</td>
+      <td>{{item.role}}</td>
+
+    </tr>
+  </tbody>
+</table>
+<div>
+    <h2>Posts</h2>
+    <ul class="">
+        <li *ngFor="let post of userList">
+            <p>{{ post.id }}</p>
+            <p>{{ post.name }}</p>
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+<!-- post -->
+
+ <!-- <div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>sr : no</th>
+                        <th>Name</th>
+                        <th>City</th>
+                        <th>status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (item of departList; track $index) {
+                        <tr>
+                            <th>{{$index+1}}</th>
+                            <th>{{item.departmentName}}</th>
+                            <th>{{item.departmentLogo}}</th>
+                            <th></th>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-7 card">
+            <div class="my-2">
+                <label for="Department">Department</label><br>
+                <input type="text" value="Department" placeholder="Department" class="p-2 rounded" [(ngModel)]="deptobj.departmentName">
+            </div>
+            <div class="my-2">
+                <label for="Department">Department logo</label><br>
+                <input type="text" value="Department" placeholder="Department logo" class="p-2 rounded" [(ngModel)]="deptobj.departmentLogo">
+            </div>
+            <button class="btn btn-success w-5rem" (click)="onSave()">Save</button>
+
+        </div>
+
+    </div>  -->
+
+<!-- </div> -->
+
+
+
+
+<!-- post method -->
+ <!-- <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Sr. No</th>
+              <th>Name</th>
+              <th>City</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Use *ngFor instead of @for -->
+            <!-- <tr *ngFor="let item of departList; index as i">
+              <td>{{ i + 1 }}</td>
+              <td>{{ item.departmentName }}</td>
+              <td>{{ item.departmentLogo }}</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div> -->
+  
+      <!-- <div class="col-md-7 card">
+        <div class="my-2">
+          <label for="Department">Department</label><br>
+          <input
+            type="text"
+            placeholder="Department"
+            class="p-2 rounded"
+            [(ngModel)]="deptobj.departmentName"
+          />
+        </div> -->
+  
+        <!-- <div class="my-2">
+          <label for="DepartmentLogo">Department Logo</label><br>
+          <input
+            type="text"
+            placeholder="Department logo"
+            class="p-2 rounded"
+            [(ngModel)]="deptobj.departmentLogo"
+          />
+        </div>
+  
+        <button class="btn btn-success w-5rem" (click)="onSave()">Save</button>
+      </div>
+    </div>
+  </div>  --> 
+  

@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class ContactUsComponent implements OnInit {
   myReactiveforms!:FormGroup;
+  formStatus:any;
   // notAllowedNames = ['uxtrendz' , 'coding']
 genders = [
   {
@@ -35,15 +36,57 @@ ngOnInit(): void {
       new FormControl(null,Validators.required),
     ])
   })
-  this.myReactiveforms.valueChanges.subscribe(
-    (value:any) => console.log(value)
-  )
-  this.myReactiveforms.statusChanges.subscribe(
-    (status:any) => console.log(status)
-  )
+  // value change
+this.myReactiveforms.valueChanges.subscribe(
+  (value) => console.log(value)
+)
+// status change
+this.myReactiveforms.statusChanges.subscribe(
+  (status) => {console.log(status)
+  this.formStatus = status}
+)
+// setvalue
+// setTimeout(() => {
+//   this.myReactiveforms.setValue({
+//     'userdetail':  {
+//  'username' : 'anum',
+//  'email' : 'anum@gmail.com'
+//     },
+//     'course' :'Html',
+//     'gender':'Male',
+//     'skills' : [
+//       'angular'
+//     ]
+ 
+ 
+//  })
+// }, 4000);
+
+// patch value
+// setTimeout(() => {
+//   this.myReactiveforms.patchValue({
+//     'userdetail':  {
+//  'email' : 'anum@gmail.com'
+//     }
+
+ 
+ 
+//  })
+// }, 4000);
 }
 onSubmit(){
-  console.log(this.myReactiveforms)
+  console.log(this.myReactiveforms);
+  this.myReactiveforms.reset({
+    'userdetail':  {
+      'username' : '',
+      'email' : ''
+         },
+         'course' :'Html',
+         'gender':'',
+         'skills' : [
+           ''
+         ]
+  })
 }
 onAddSkills(){
   const controls = new FormControl(null,Validators.required);
@@ -69,17 +112,17 @@ onAddSkills(){
 // }
 
 
-constructor() {
-  this.myReactiveforms = new FormGroup({
-    userdetail: new FormGroup({
-      // Adding both synchronous and asynchronous validators
-      email: new FormControl(null, 
-        [Validators.required, Validators.email],  // Synchronous validators
-        this.NaEmails.bind(this)                  // Asynchronous validator
-      )
-    })
-  });
-}
+// constructor() {
+//   this.myReactiveforms = new FormGroup({
+//     userdetail: new FormGroup({
+//       // Adding both synchronous and asynchronous validators
+//       email: new FormControl(null, 
+//         [Validators.required, Validators.email],  // Synchronous validators
+//         this.NaEmails.bind(this)                  // Asynchronous validator
+//       )
+//     })
+//   });
+// }
 
 // Asynchronous validator function
 NaEmails(control: AbstractControl): Promise<any> | Observable<any> {

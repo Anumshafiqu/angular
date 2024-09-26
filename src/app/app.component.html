@@ -35,6 +35,7 @@
  <!-- routerlinkactive is link ko active karta ha
   jis ka route ka path hmra url ka part hota ha  routerlinkactive analize karta ha ka kon sa path active ha or is link
   ko active kar data ha-->
+  <nav class="navbar bg-light">
      <ul class="nav nav-tabs">
       <li class="nav-item">
         <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="home">Home</a>
@@ -54,5 +55,12 @@
       <li class="nav-item">
         <a class="nav-link" routerLinkActive="active" routerLink="page-not-found">Page not found</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="get">get-api</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="post-api">post</a>
+      </li>
     </ul>
+  </nav>
     <router-outlet></router-outlet>

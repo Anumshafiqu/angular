@@ -1,0 +1,47 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Sr. No</th>
+                        <th>Name</th>
+                        <th>City</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of departList; let i = index">
+                        <th>{{i + 1}}</th>
+                        <th>{{item.departmentName}}</th>
+                        <th>{{item.departmentLogo}}</th>
+                        <th><button class="btn btn-success w-5rem" (click)="onEdit(item)">Edit</button></th>
+                        <th><button class="btn btn-danger w-5rem" (click)="onDelete(item.departmentId)">Delete</button></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-7 card">
+            <div class="my-2">
+                <label for="Department">Department</label><br>
+                <input type="text" placeholder="Department" class="p-2 rounded" [(ngModel)]="deptobj.departmentName">
+            </div>
+            <div class="my-2">
+                <label for="Department">Department Logo</label><br>
+                <input type="text" placeholder="Department Logo" class="p-2 rounded" [(ngModel)]="deptobj.departmentLogo">
+            </div>
+            <div>
+                {{deptobj | json}}
+                @if (deptobj.departmentId == 0) {
+                    <button class="btn btn-success w-5rem" (click)="onSave()">Save</button>
+                }@else {
+                    <button class="btn btn-warning text-white fw-bold w-5rem" (click)="onupdate()">update</button>
+                }
+                
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
