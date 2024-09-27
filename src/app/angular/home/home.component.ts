@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
+  products = [
+    {name : 'Laptop'},
+    {name : 'Mobile'},
+    {name : 'TV'},
+    {name : 'Watch'}
+  ]
+  statusOnline:boolean = true;
 }

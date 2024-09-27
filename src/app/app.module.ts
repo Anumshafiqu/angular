@@ -31,6 +31,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ApiComponent } from './service/api/api.component';
 import { PostApiComponent } from './angular/post-api/post-api.component';
+import { CardComponent } from './angular/card/card.component';
+import { BuyProductComponent } from './angular/buy-product/buy-product.component';
+import { ChildComponent } from './angular/child/child.component';
 
 
 
@@ -43,6 +46,7 @@ const appRoutes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'post-api', component: PostApiComponent},
+  { path: 'buy-product', component: BuyProductComponent},
   {
     path: 'prodcut', component: ProdcutComponent, children: [
       { path: 'laptop', component: LaptopComponent },
@@ -81,6 +85,9 @@ const appRoutes: Routes = [
     GetComponent,
     ApiComponent,
     PostApiComponent,
+    CardComponent,
+    BuyProductComponent,
+    ChildComponent,
 
   ],
   imports: [

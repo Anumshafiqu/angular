@@ -1,0 +1,51 @@
+<div class="container mt-4 bg-light">
+    <div class="text-center p-3">
+        <h4 class="text-dark">Product</h4>
+        <p class="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet harum necessitatibus dolor
+            sequi illum ipsum, porro rem blanditiis eaque, quas animi a. In soluta ratione non repellat culpa,
+            reiciendis quo.</p>
+
+    </div>
+    <hr class="mb-3">
+
+    <div class="row">
+        <div class="alert alert-light border d-flex align-items-center w-75 mx-5 " *ngIf="Addedproduct">
+            <p> <strong class="text-success">{{Addedproduct}}</strong> is selected and added in cart</p>
+            <button class="btn btn-success ms-auto">Checkout</button>
+
+        </div>
+        <div class="col-md-12">
+            <div class="card" style="width: 16rem">
+                <img src="../../../assets/cup of coffee.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Laptop</h5>
+                    <button class="btn btn-primary" (click)="onSelectedproduct('Laptop')">Select this product</button>
+                </div>
+            </div>
+            <div class="card mx-3" style="width: 16rem;">
+                <img src="../../../assets/images.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Mobile</h5>
+                    <button class="btn btn-primary" (click)="onSelectedproduct('Mobile')">Select this product</button>
+                </div>
+            </div>
+            <div class="card" style="width: 16rem;">
+                <img src="../../../assets/imgage - Copy.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">TV</h5>
+                    <button class="btn btn-primary" (click)="onSelectedproduct('TV')">Select this product</button>
+                </div>
+            </div>
+            <div class="card mx-3" style="width: 16rem;">
+                <img src="../../../assets/watch-img.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Watch</h5>
+                    <button class="btn btn-primary" (click)="onSelectedproduct('Watch')">Select this product</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 mt-4">
+        <app-child [productselected]="proselected" [selectedproduct]="selproduct"></app-child> 
+    </div>
+</div>
