@@ -46,6 +46,8 @@
         </div>
     </div>
     <div class="col-md-12 mt-4">
-        <app-child [productselected]="proselected" [selectedproduct]="selproduct"></app-child> 
+        <app-child [productselected]="proselected"
+         [selectedproduct]="selproduct"
+         (Addedproduct)="onaddedproduct($event)"></app-child> 
     </div>
 </div>

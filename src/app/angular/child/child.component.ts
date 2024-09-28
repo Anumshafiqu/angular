@@ -1,4 +1,4 @@
-import { Component, Input, input } from '@angular/core';
+import { Component, EventEmitter, Input, input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -6,10 +6,12 @@ import { Component, Input, input } from '@angular/core';
   styleUrl: './child.component.css'
 })
 export class ChildComponent {
+  // input decorator
  @Input() productselected:boolean= false;
  @Input() selectedproduct !:string;
-  Addedproduct:any;
+//  output decorator
+ @Output()  Addedproduct= new EventEmitter<any>();
   onAddProduct(){
-    this.Addedproduct = this.selectedproduct
+    this.Addedproduct.emit(this.selectedproduct);
   }
 }

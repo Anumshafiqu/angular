@@ -16,4 +16,7 @@ export class BuyProductComponent {
   // onAddProduct(){
   //   this.Addedproduct = this.selectedproduct
   // }
+  onaddedproduct(proDate:any){
+    this.Addedproduct = proDate
+  }
 }
