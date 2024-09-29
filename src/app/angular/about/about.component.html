@@ -1,9 +1,10 @@
 <div class="container mt-4 text-center bg-light">
     <div class="text-center p-3">
         <h4 class="text-dark">About</h4>
-        <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet harum necessitatibus dolor
-            sequi illum ipsum, porro rem blanditiis eaque, quas animi a. In soluta ratione non repellat culpa,
-            reiciendis quo.</p>
+        <input type="text" placeholder="text here" #val>
+        <button class="p-1" (click)="SubmitValue(val)">Submit Value</button>
+        <app-comp-1 *ngIf="CompExist" [myValue]="Value">Ng content : {{Value}}</app-comp-1><br><br>
+        <button class="btn btn-danger" (click)="ondestroy()">Submit Value</button>
     </div>
 
 
@@ -12,9 +13,9 @@
     <!-- use -->
     <!-- we can use pipe to transform our output in template -->
 
-     {{value | uppercase}}<br>
+     <!-- {{value | uppercase}}<br>
       {{value | lowercase}}<br>
-      {{value | titlecase}}<br>
+      {{value | titlecase}}<br> -->
       <!-- date -->
     <!-- {{date | date : 'short'}}<br>
       {{date | date : 'medium'}}<br>
@@ -26,7 +27,7 @@
 
     <!-- custom pipe -->
 
-    {{value | uxpipe: 8}}<br>
+    <!-- {{value | uxpipe: 8}}<br> -->
     <!-- <ul>
         <li *ngFor="let name of nameArr">
             {{name | uxpipe:8}}
@@ -34,13 +35,13 @@
       </ul> -->
 
     <!-- filter -->
-
+<!-- 
     <div class="row mt-5  justify-content-center">
         <!-- pure pipe jb b koi pipe hmra data transform karta ha tb angular is pipe ko execute karta ha
        pure pipe is time execute hota ha jb koi pure change hota ha pipe ki input value ma its means that pure
        pipe purrely foucus karta ha ka kb koi chage detect ho rah ha
         impure pipe is tim execute hota ha jb b koi change detect hota ha angular app ma impure pipe every chage pa
-        execute hota rhata ha  -->
+        execute hota rhata ha  
         <div class="col-md-8">
             <div class="form-inline d-flex mb-2">
                 <input type="text" placeholder="Add Product" #add class="form-control w-50">
@@ -74,5 +75,17 @@
                 </tbody>
             </table>
         </div>
-    </div>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
 </div>

@@ -34,6 +34,14 @@ import { PostApiComponent } from './angular/post-api/post-api.component';
 import { CardComponent } from './angular/card/card.component';
 import { BuyProductComponent } from './angular/buy-product/buy-product.component';
 import { ChildComponent } from './angular/child/child.component';
+import { Card1Component } from './angular/card-1/card-1.component';
+import { Card2Component } from './angular/card-2/card-2.component';
+import { MessageService } from './appservice/message.service';
+import { Card3Component } from './angular/card-3/card-3.component';
+import { Comp1Component } from './angular/comp-1/comp-1.component';
+import { Comp2Component } from './angular/comp-2/comp-2.component';
+import { Comp3Component } from './angular/comp-3/comp-3.component';
+import { Comp4Component } from './angular/comp-4/comp-4.component';
 
 
 
@@ -88,6 +96,13 @@ const appRoutes: Routes = [
     CardComponent,
     BuyProductComponent,
     ChildComponent,
+    Card1Component,
+    Card2Component,
+    Card3Component,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
+    Comp4Component,
 
   ],
   imports: [
@@ -101,7 +116,7 @@ const appRoutes: Routes = [
 
 
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

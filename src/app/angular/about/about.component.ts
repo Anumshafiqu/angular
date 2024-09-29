@@ -54,4 +54,15 @@ onAddProduct(add:any){
   })
 
 }
+
+
+Value:string= '';
+CompExist:boolean = true
+SubmitValue(val:any){
+  this.Value = val.value
+
+}
+ondestroy(){
+  this.CompExist = false;
+}
 }

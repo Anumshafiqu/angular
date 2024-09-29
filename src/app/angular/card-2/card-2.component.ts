@@ -9,7 +9,8 @@ import { MessageService } from '../../appservice/message.service';
 export class Card2Component implements OnInit{
   Products :any = {};
   ngOnInit(): void {
-    this.Products = this._msgService.product
+    // this.Products = this._msgService.product
+    this._msgService.product().subscribe(productData => this.Products = productData)
   }
 
   constructor(private _msgService:MessageService){}
