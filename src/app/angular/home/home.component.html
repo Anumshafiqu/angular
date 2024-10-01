@@ -1,38 +1,33 @@
 <div class="container bg-light mt-4">
     <div class="text-center p-3">
         <h4 class="text-dark ">Home</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet harum necessitatibus dolor sequi illum
-            ipsum, porro rem blanditiis eaque, quas animi a. In soluta ratione non repellat culpa, reiciendis quo.</p>
+
     </div>
-    <!-- <div class="text-center">
-        <ng-container *ngIf="statusOnline">
-            <div *ngFor="let proitem of products">
-                {{proitem.name}}
+    <div class="container">
+        <div #box>
+            <h5 class="text-center p-4 rounded mt-3">username is : <strong>{{username}}</strong></h5>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mt-3">
+    
+                <button (click)="Changechildproperty()" class="btn btn-success mx-2">Change child property</button>
+                <button (click)="CallChildMethod()" class="btn btn-success mx-2">Call child Method</button>
             </div>
-        </ng-container>
+            <div class="col-md-6">
+                <app-comp-2>
+                    <p #childcontent>This is ng content paragraph</p><br>
+                </app-comp-2>
+            </div>
+        </div>
     </div>
-</div>
-<div class="text-center">
-    <div *ngIf="statusOnline">
-        <div *ngFor="let proitem of products">
-            {{proitem.name}}
-        </div>
-    </div> -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
-
-    <div class="row">
-        <div class="col-md-6">
-            <app-comp-1></app-comp-1>
-        </div>
-        <div class="col-md-6">
-            <app-comp-2></app-comp-2>
-        </div>
-        <div class="col-md-6">
-            <app-comp-3></app-comp-3>
-        </div>
-        <div class="col-md-6">
-            <app-comp-4></app-comp-4>
-        </div>
-
-    </div>
 </div>

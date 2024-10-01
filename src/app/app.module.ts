@@ -42,6 +42,7 @@ import { Comp1Component } from './angular/comp-1/comp-1.component';
 import { Comp2Component } from './angular/comp-2/comp-2.component';
 import { Comp3Component } from './angular/comp-3/comp-3.component';
 import { Comp4Component } from './angular/comp-4/comp-4.component';
+import { TestdirectiveDirective } from './angular/appdirective/testdirective.directive';
 
 
 
@@ -55,6 +56,7 @@ const appRoutes: Routes = [
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'post-api', component: PostApiComponent},
   { path: 'buy-product', component: BuyProductComponent},
+  { path: 'card-1', component: Card1Component},
   {
     path: 'prodcut', component: ProdcutComponent, children: [
       { path: 'laptop', component: LaptopComponent },
@@ -103,6 +105,7 @@ const appRoutes: Routes = [
     Comp2Component,
     Comp3Component,
     Comp4Component,
+    TestdirectiveDirective,
 
   ],
   imports: [
