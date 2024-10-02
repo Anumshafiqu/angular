@@ -43,6 +43,7 @@ import { Comp2Component } from './angular/comp-2/comp-2.component';
 import { Comp3Component } from './angular/comp-3/comp-3.component';
 import { Comp4Component } from './angular/comp-4/comp-4.component';
 import { TestdirectiveDirective } from './angular/appdirective/testdirective.directive';
+import { DropdownDirective } from './angular/appdirective/dropdown.directive';
 
 
 
@@ -106,6 +107,7 @@ const appRoutes: Routes = [
     Comp3Component,
     Comp4Component,
     TestdirectiveDirective,
+    DropdownDirective,
 
   ],
   imports: [
