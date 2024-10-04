@@ -14,14 +14,13 @@ import { TemplateRefrenceComponent } from './angular/template-refrence/template-
 import { HomeComponent } from './angular/home/home.component';
 import { AboutComponent } from './angular/about/about.component';
 import { ContactComponent } from './angular/contact/contact.component';
-import { ProdcutComponent } from './angular/prodcut/prodcut.component';
-import {  Routes } from '@angular/router';
+// import { ProdcutComponent } from './angular/prodcut/prodcut.component';
 import { LoginComponent } from './angular/login/login.component';
 import { PageNotFoundComponent } from './angular/page-not-found/page-not-found.component';
-import { LaptopComponent } from './angular/laptop/laptop.component';
-import { TelevisionComponent } from './angular/television/television.component';
-import { MobileComponent } from './angular/mobile/mobile.component';
-import { WatchComponent } from './angular/watch/watch.component';
+// import { LaptopComponent } from './angular/laptop/laptop.component';
+// import { TelevisionComponent } from './angular/television/television.component';
+// import { MobileComponent } from './angular/mobile/mobile.component';
+// import { WatchComponent } from './angular/watch/watch.component';
 import { PipeComponent } from './angular/pipe/pipe.component';
 import { UxpipePipe } from './apppipe/uxpipe.pipe';
 import { FilterPipe } from './apppipe/filter.pipe';
@@ -43,33 +42,46 @@ import { Comp2Component } from './angular/comp-2/comp-2.component';
 import { Comp3Component } from './angular/comp-3/comp-3.component';
 import { Comp4Component } from './angular/comp-4/comp-4.component';
 import { TestdirectiveDirective } from './angular/appdirective/testdirective.directive';
-import { DropdownDirective } from './angular/appdirective/dropdown.directive';
+ import { DropdownDirective } from './angular/appdirective/dropdown.directive';
+// import { ServiceComponent } from './angular/service/service.component';
+// import { HoemPageComponent } from './angular/service/hoem-page/hoem-page.component';
+// import { AboutPageComponent } from './angular/service/about-page/about-page.component';
+// import { Contact2Component } from './angular/service/contact-2/contact-2.component';
+// import { BlogComponent } from './angular/service/blog/blog.component';
+import { ServicesModule } from './angular/service/services.module';
+import { DropdownModule } from './angular/dropdown/dropdown.module';
+import { DesignUtilityModule } from './appmodule/design-utility.module';
+// import { DropdownComponent } from './angular/dropdown/dropdown.component';
+// import { LaptopPageComponent } from './angular/dropdown/laptop-page/laptop-page.component';
+// import { MobilePageComponent } from './angular/dropdown/mobile-page/mobile-page.component';
 
 
 
 
-const appRoutes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'contact-us', component: ContactUsComponent },
-  { path: 'post-api', component: PostApiComponent},
-  { path: 'buy-product', component: BuyProductComponent},
-  { path: 'card-1', component: Card1Component},
-  {
-    path: 'prodcut', component: ProdcutComponent, children: [
-      { path: 'laptop', component: LaptopComponent },
-      { path: 'television', component: TelevisionComponent },
-      { path: 'mobile', component: MobileComponent },
-      { path: 'watch', component: WatchComponent },
-    ]
-  },
-  { path: 'get', component: GetComponent },
-  { path: '**', component: PageNotFoundComponent },
 
-]
+
+// const appRoutes: Routes = [
+//   { path: '', redirectTo: 'login', pathMatch: 'full' },
+//   { path: 'home', component: HomeComponent },
+//   { path: 'login', component: LoginComponent },
+//   { path: 'about', component: AboutComponent },
+//   { path: 'contact', component: ContactComponent },
+//   { path: 'contact-us', component: ContactUsComponent },
+//   { path: 'post-api', component: PostApiComponent},
+//   { path: 'buy-product', component: BuyProductComponent},
+//   { path: 'card-1', component: Card1Component},
+//   {
+//     path: 'prodcut', component: ProdcutComponent, children: [
+//       { path: 'laptop', component: LaptopComponent },
+//       { path: 'television', component: TelevisionComponent },
+//       { path: 'mobile', component: MobileComponent },
+//       { path: 'watch', component: WatchComponent },
+//     ]
+//   },
+//   { path: 'get', component: GetComponent },
+//   { path: '**', component: PageNotFoundComponent },
+
+// ]
 @NgModule({
   declarations: [
     AppComponent,
@@ -82,13 +94,13 @@ const appRoutes: Routes = [
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    ProdcutComponent,
+    // ProdcutComponent,
     LoginComponent,
     PageNotFoundComponent,
-    LaptopComponent,
-    TelevisionComponent,
-    MobileComponent,
-    WatchComponent,
+    // LaptopComponent,
+    // TelevisionComponent,
+    // MobileComponent,
+    // WatchComponent,
     PipeComponent,
     UxpipePipe,
     FilterPipe,
@@ -108,16 +120,26 @@ const appRoutes: Routes = [
     Comp4Component,
     TestdirectiveDirective,
     DropdownDirective,
+    // DropdownComponent,
+    // LaptopPageComponent,
+    // MobilePageComponent,
+    // ServiceComponent,
+    // HoemPageComponent,
+    // AboutPageComponent,
+    // Contact2Component,
+    // BlogComponent,
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
-    RouterModule.forRoot(appRoutes)
+    ServicesModule,
+    DropdownModule,
+    // RouterModule.forRoot(appRoutes)
 
 
   ],
