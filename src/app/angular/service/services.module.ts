@@ -6,10 +6,10 @@ import { Contact2Component } from './contact-2/contact-2.component';
 import { HoemPageComponent } from './hoem-page/hoem-page.component';
 import { ServiceComponent } from './service.component';
 import { RouterModule } from '@angular/router';
-import { DropdownDirective } from '../appdirective/dropdown.directive';
+import { DesignUtilityModule } from '../../appmodule/design-utility.module';
 const proservices = [
   {
-    path: 'service', component: ServiceComponent, children: [
+    path: '', component: ServiceComponent, children: [
       { path: 'hoem-page', component: HoemPageComponent },
       { path: 'about-page', component: AboutPageComponent },
       { path: 'contact-2', component: Contact2Component},
@@ -28,7 +28,12 @@ const proservices = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(proservices)
+    RouterModule.forChild(proservices),
+    DesignUtilityModule
   ]
 })
-export class ServicesModule { }
+export class ServicesModule { 
+  constructor(){
+    console.log("Services Module loadded")
+  }
+}

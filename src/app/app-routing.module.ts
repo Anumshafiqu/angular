@@ -16,18 +16,7 @@ import { PostApiComponent } from './angular/post-api/post-api.component';
 import { ProdcutComponent } from './angular/prodcut/prodcut.component';
 import { TelevisionComponent } from './angular/television/television.component';
 import { WatchComponent } from './angular/watch/watch.component';
-import { ServicesModule } from './angular/service/services.module';
-import { DropdownModule } from './angular/dropdown/dropdown.module';
-import { DesignUtilityModule } from './appmodule/design-utility.module';
-import { DropdownDirective } from './angular/appdirective/dropdown.directive';
-// import { DropdownComponent } from './angular/dropdown/dropdown.component';
-// import { LaptopPageComponent } from './angular/dropdown/laptop-page/laptop-page.component';
-// import { MobilePageComponent } from './angular/dropdown/mobile-page/mobile-page.component';
-// import { ServiceComponent } from './angular/service/service.component';
-// import { HoemPageComponent } from './angular/service/hoem-page/hoem-page.component';
-// import { AboutPageComponent } from './angular/service/about-page/about-page.component';
-// import { Contact2Component } from './angular/service/contact-2/contact-2.component';
-// import { BlogComponent } from './angular/service/blog/blog.component';
+
 
 
 const routes: Routes = [
@@ -41,6 +30,15 @@ const routes: Routes = [
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'post-api', component: PostApiComponent},
   { path: 'buy-product', component: BuyProductComponent},
+  // {path : 'dropdown' , loadChildren : "./dropdown/dropdown.module#DropdownModule"},
+  { 
+    path: 'dropdown', 
+    loadChildren: () => import('./angular/dropdown/dropdown.module').then(m => m.DropdownModule)
+  },
+  { 
+    path: 'service', 
+    loadChildren: () => import('./angular/service/services.module').then(m => m.ServicesModule)
+  },
   { path: 'card-1', component: Card1Component},
   {
     path: 'prodcut', component: ProdcutComponent, children: [
@@ -64,8 +62,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)
   ],
   exports: [RouterModule,
-    ServicesModule,
-    DropdownModule,
+
 
   ]
 })

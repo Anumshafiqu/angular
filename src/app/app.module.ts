@@ -42,18 +42,6 @@ import { Comp2Component } from './angular/comp-2/comp-2.component';
 import { Comp3Component } from './angular/comp-3/comp-3.component';
 import { Comp4Component } from './angular/comp-4/comp-4.component';
 import { TestdirectiveDirective } from './angular/appdirective/testdirective.directive';
- import { DropdownDirective } from './angular/appdirective/dropdown.directive';
-// import { ServiceComponent } from './angular/service/service.component';
-// import { HoemPageComponent } from './angular/service/hoem-page/hoem-page.component';
-// import { AboutPageComponent } from './angular/service/about-page/about-page.component';
-// import { Contact2Component } from './angular/service/contact-2/contact-2.component';
-// import { BlogComponent } from './angular/service/blog/blog.component';
-import { ServicesModule } from './angular/service/services.module';
-import { DropdownModule } from './angular/dropdown/dropdown.module';
-import { DesignUtilityModule } from './appmodule/design-utility.module';
-// import { DropdownComponent } from './angular/dropdown/dropdown.component';
-// import { LaptopPageComponent } from './angular/dropdown/laptop-page/laptop-page.component';
-// import { MobilePageComponent } from './angular/dropdown/mobile-page/mobile-page.component';
 
 
 
@@ -119,26 +107,15 @@ import { DesignUtilityModule } from './appmodule/design-utility.module';
     Comp3Component,
     Comp4Component,
     TestdirectiveDirective,
-    DropdownDirective,
-    // DropdownComponent,
-    // LaptopPageComponent,
-    // MobilePageComponent,
-    // ServiceComponent,
-    // HoemPageComponent,
-    // AboutPageComponent,
-    // Contact2Component,
-    // BlogComponent,
 
   ],
   imports: [
     BrowserModule,
-     AppRoutingModule,
+      AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
-    ServicesModule,
-    DropdownModule,
     // RouterModule.forRoot(appRoutes)
 
 
@@ -146,4 +123,8 @@ import { DesignUtilityModule } from './appmodule/design-utility.module';
   providers: [MessageService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(){
+    console.log("app Module loadded")
+  }
+}

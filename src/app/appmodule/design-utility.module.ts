@@ -6,13 +6,13 @@ import { DropdownDirective } from '../angular/appdirective/dropdown.directive';
 
 @NgModule({
   declarations: [
-
+    DropdownDirective
   ],
   imports: [
     CommonModule
   ],
   exports : [
-
+    DropdownDirective
   ]
 })
 export class DesignUtilityModule { }

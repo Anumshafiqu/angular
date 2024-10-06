@@ -4,11 +4,11 @@ import { DropdownComponent } from './dropdown.component';
 import { LaptopPageComponent } from './laptop-page/laptop-page.component';
 import { MobilePageComponent } from './mobile-page/mobile-page.component';
 import { RouterModule } from '@angular/router';
-import { DropdownDirective } from '../appdirective/dropdown.directive';
 import { DesignUtilityModule } from '../../appmodule/design-utility.module';
+
 const dropdownpro = [
   {
-    path: 'dropdown', component: DropdownComponent, children: [
+    path: '', component: DropdownComponent, children: [
       { path: 'laptop-page', component: LaptopPageComponent },
       { path: 'mobile-page', component: MobilePageComponent },
     ]
@@ -19,11 +19,17 @@ const dropdownpro = [
     DropdownComponent,
     LaptopPageComponent,
     MobilePageComponent,
+    //  DesignUtilityModule
+
     
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(dropdownpro)
+     RouterModule.forChild(dropdownpro)
   ]
 })
-export class DropdownModule { }
+export class DropdownModule {
+  constructor(){
+    console.log("dropdown Module loadded")
+  }
+ }
