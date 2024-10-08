@@ -42,6 +42,8 @@ import { Comp2Component } from './angular/comp-2/comp-2.component';
 import { Comp3Component } from './angular/comp-3/comp-3.component';
 import { Comp4Component } from './angular/comp-4/comp-4.component';
 import { TestdirectiveDirective } from './angular/appdirective/testdirective.directive';
+import { HomeModule } from './angular/home/home.module';
+import { AboutModule } from './angular/about/about.module';
 
 
 
@@ -79,8 +81,8 @@ import { TestdirectiveDirective } from './angular/appdirective/testdirective.dir
     StringInterpolationComponent,
     EventBindingComponent,
     TemplateRefrenceComponent,
-    HomeComponent,
-    AboutComponent,
+    //  HomeComponent,
+    //  AboutComponent,
     ContactComponent,
     // ProdcutComponent,
     LoginComponent,

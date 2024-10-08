@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { NgIfComponent } from './angular/ng-if/ng-if.component';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './angular/about/about.component';
 import { BuyProductComponent } from './angular/buy-product/buy-product.component';
 import { Card1Component } from './angular/card-1/card-1.component';
 import { ContactUsComponent } from './angular/contact-us/contact-us.component';
 import { ContactComponent } from './angular/contact/contact.component';
 import { GetComponent } from './angular/get/get.component';
-import { HomeComponent } from './angular/home/home.component';
 import { LaptopComponent } from './angular/laptop/laptop.component';
 import { LoginComponent } from './angular/login/login.component';
 import { MobileComponent } from './angular/mobile/mobile.component';
@@ -16,6 +14,10 @@ import { PostApiComponent } from './angular/post-api/post-api.component';
 import { ProdcutComponent } from './angular/prodcut/prodcut.component';
 import { TelevisionComponent } from './angular/television/television.component';
 import { WatchComponent } from './angular/watch/watch.component';
+import { HomeModule } from './angular/home/home.module';
+import { HomeComponent } from './angular/home/home.component';
+import { AboutModule } from './angular/about/about.module';
+import { CustomPreloadingService } from './service/custom-preloading.service';
 
 
 
@@ -23,20 +25,21 @@ const routes: Routes = [
 
 
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+     { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'about', component: AboutComponent },
+   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'post-api', component: PostApiComponent},
   { path: 'buy-product', component: BuyProductComponent},
   // {path : 'dropdown' , loadChildren : "./dropdown/dropdown.module#DropdownModule"},
   { 
-    path: 'dropdown', 
+    path: 'dropdown',  data: {Preload : true},
     loadChildren: () => import('./angular/dropdown/dropdown.module').then(m => m.DropdownModule)
   },
+  // custom preloading
   { 
-    path: 'service', 
+    path: 'service', data: {Preload : true},
     loadChildren: () => import('./angular/service/services.module').then(m => m.ServicesModule)
   },
   { path: 'card-1', component: Card1Component},
@@ -59,10 +62,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)
+  imports: [RouterModule.forRoot(routes, {preloadingStrategy : CustomPreloadingService}),
+
   ],
   exports: [RouterModule,
-
 
   ]
 })
